@@ -1,27 +1,41 @@
-# Exploration Phase 01 — Problem Statement
+# Exploration 01 — Problem Statement
 
+[Before We Begin](./00_Before_We_Begin.md) explains the creative origin and intended relationship. This document turns that starting point into a user question: might people want to connect with a small animal who has a life of his own, without ongoing care, conversation, or demands for a response?
 
-## Problem: Constraints of Real Pet Ownership and Limitations of 2D Alternatives
+## 1. From pet-ownership constraints to broader companionship needs
 
-Keeping a real pet is, first and foremost, an ongoing responsibility. Daily care requires time and energy, while food, supplies, and medical treatment require money. Rental rules, living space, travel frequency, and lifestyle can also limit pet ownership. Liking a particular animal does not automatically mean someone has suitable conditions for keeping it. Animals such as seals, in particular, are not a realistic option as household pets.
+Keeping a real pet requires a long-term investment of time, energy, and money. Daily care, supplies, and medical needs bring continuing responsibilities, while rental rules, living space, travel frequency, and family circumstances can limit pet ownership. Animals such as seals are particularly unsuitable as an ordinary household pet option. People who want to be close to animals but cannot keep pets were the project's initial focus.
 
-The project focuses on people who want pet-like companionship but find it difficult to meet these conditions and responsibilities. Gen Z and younger users are the current target audience.
+Connection with a character, however, does not necessarily come from wanting a pet. Some people may find emotional comfort in game characters, plush toys, or fictional creatures. Others may simply want “another presence” around them while keeping their own activities and rhythm. These are directions for research; the creator's own emotional response cannot establish user demand.
 
-2D virtual pets are an existing alternative. They do not depend on real animals and lower the practical barriers to pet ownership. However, the character remains within a desktop or mobile interface and lacks a spatial position shared with the user, a bodily scale, and the conditions for establishing a bodily relationship through changes in viewpoint and physical approach. In addition, if a virtual pet still requires feeding, check-ins, or ongoing state maintenance, it may reintroduce the burden of responsibility that this project aims to avoid.
+## 2. Retain the age framing and add behavioral and psychological segments
 
-The candidate answer proposed in the overview is therefore a spatial pet with no long-term care obligations: giving the established character, Baobao, a relatively stable position, an appropriate scale, and bodily responses to the user’s actions, in order to explore whether it can create a stronger sense of embodiment than a 2D presentation and, on that basis, provide companionship value. The advantages of spatial presentation, the subjective sense of contact, and the companionship effect all remain to be validated; none can be inferred directly from a three-dimensional appearance.
+Gen Z and younger users remain the current demographic framing. Three early hypothesis segments are added for future recruitment and comparison. They are not validated target markets and may overlap.
 
-Here, “sense of embodiment” refers to credible position, scale, approachability, and coherent bodily feedback—not a photorealistic appearance or a real living creature. Without haptic hardware, visual and behavioral feedback may create a subjective sense of contact, but it does not provide physical haptics. Low disruption constrains how the concept behaves: interaction is invited by the user, ignoring the pet does not escalate reminders, and the pet naturally returns to rest after interaction stops. No feeding, no check-ins, no punishment, and no long-term care obligations directly address the burden of responsibility. See the [Interaction Experience Specification](./05_Interaction_Experience_Specification.md) for the detailed rules.
+| Candidate segment | Possible needs or circumstances | What user research needs to establish |
+|---|---|---|
+| A — Pet-constrained | Likes animals or wants a pet, but faces rental, travel, financial, family, time, or housing constraints. | Whether the person wants care, physical contact, interaction, or companionship, and which of those needs a virtual companion could address. |
+| B — Character-attached | Readily forms emotional connections with game characters, mascots, animated characters, plush toys, or fictional creatures, without necessarily wanting a real pet. | Whether connection comes from appearance, personality, story, familiarity, or interaction, and whether spatial presentation adds value. |
+| C — Ambient-companionship seeking | Wants another presence in their surroundings, such as at home, without continuous conversation, interruptions, demands to reply, care responsibilities, or social pressure. | In which real situations this preference occurs, whether existing alternatives are sufficient, and whether quiet presence adds value. |
 
-## Why now: Spatial Media Provide a New Opportunity for Exploration
+Research should begin with recent experiences, lifestyle, and existing alternatives before showing the concept. Record age, device habits, segment membership, and reasons for rejection separately to examine whether demand differences are better explained by age or companionship preferences. There is no evidence yet that identifies the most promising segment; see U5 in 05.
 
-My firsthand experience of spatial presentation and eye-and-hand interaction on Apple Vision Pro shows that the spatial medium is worth exploring. It allows the project to examine position, scale, approach, and bodily response rather than discussing only character animation within a screen. Apple Vision Pro is not the target product platform; the final product is intended for Goertek’s own VR platform, whose device capabilities and technical stack have not yet been confirmed. The change in medium is a reason to begin the exploration, not proof of user demand or of complete implementation feasibility on Goertek’s target platform.
+## 3. Existing alternatives and the opportunity to explore
 
-The interaction rules and feedback timing can first be examined at minimal cost. A genuine sense of spatial embodiment, hand input, and feedback timing require access to the device. Cross-app coexistence and state continuity are separate, deferred questions and are not prerequisites for answering the current primary question. See [Next-Phase Decisions](./04_Next_Phase_Decisions.md) for the specific evidence and methods.
+2D virtual pets reduce the practical requirements of keeping a real animal. If a product still requires feeding, check-ins, or state maintenance, it may introduce care obligations. Complex features and cumbersome interactions may also increase the effort of using it.
 
-## Why us: Firsthand Experience and Access to Technical Exchange at Goertek
+Game characters and plush toys may also carry emotional connections. Research should establish how users currently find companionship, relaxation, or emotional comfort. The project needs to compare alternatives people actually use, rather than infer demand for a virtual companion solely from an inability to keep pets.
 
-This direction grew out of my firsthand experience with Apple Vision Pro: virtual content appeared in physical space, and gaze, hand movements, and visual feedback gave me a sensation close to “touch.”
+2D characters appear within a screen, which limits how they express shared spatial position, bodily scale, and the relationship established by reaching toward them. A medium's limitations are not necessarily a user pain point, however, and 2D experiences may already provide sufficient companionship. Scout therefore explores two separate questions: whether co-presence without care obligations has value, and whether spatial presentation adds enough value to warrant adoption.
 
+## 4. Why explore this now?
 
-Goertek’s XR devices, technical knowledge-sharing, and relevant specialists provide a potential entry point for further discussion of spatial positioning, hand tracking, and feedback conditions. The project remains an individual design exploration and has not secured a commitment of device access or engineering support. If opportunities for technical exchange become available, the abstract requirements for a sense of embodiment can be translated into testable technical questions. Evidence gaps are maintained centrally in the [Assumption Map](./02_Assumption_Map.md); this document does not make separate conclusions about impact or feasibility.
+The spatial concept originated in my personal experience with Apple Vision Pro: virtual content appeared in the real environment, and gaze, hand movements, and visual feedback gave me a sensation close to “touch.” This made a spatial companion with position, scale, and bodily responses a direction worth discussing. It is not a general user finding or physical haptic feedback.
+
+Apple Vision Pro is not the target product platform. The project targets Goertek's own VR platform; the device, operating system, engine, SDK, input permissions, and operating context remain unconfirmed and need to be reviewed in the target conditions.
+
+## 5. Why are we positioned to explore it?
+
+Goertek's XR devices, technical sharing, and specialists offer potential points of contact. This remains a personal design exploration without a commitment of device access or engineering support. The concept video and browser behavior reference will help turn an abstract request into specific interaction and capability questions. Support still requires an actual decision.
+
+Building on these user hypotheses and exploration conditions, [02_Product Thesis and Validation Framework](./02_Product_Thesis_and_Validation_Framework.md) defines the candidate relationship and how it should be assessed.
