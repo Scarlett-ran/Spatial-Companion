@@ -1,0 +1,12 @@
+.DS_Store
+**/.DS_Store
+
+# Local environment and credential files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.mobileprovision
+
