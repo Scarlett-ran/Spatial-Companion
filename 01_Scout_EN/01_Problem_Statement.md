@@ -1,41 +1,29 @@
 # Exploration 01 — Problem Statement
 
-[Before We Begin](./00_Before_We_Begin.md) explains the creative origin and intended relationship. This document turns that starting point into a user question: might people want to connect with a small animal who has a life of his own, without ongoing care, conversation, or demands for a response?
+## 1. The user question
 
-## 1. From pet-ownership constraints to broader companionship needs
+During time spent alone—living, working, or relaxing—some people may want another presence they can care about without taking on constant conversation, response demands, or ongoing care. Baobao explores whether this form of low-pressure companionship addresses an unmet need.
 
-Keeping a real pet requires a long-term investment of time, energy, and money. Daily care, supplies, and medical needs bring continuing responsibilities, while rental rules, living space, travel frequency, and family circumstances can limit pet ownership. Animals such as seals are particularly unsuitable as an ordinary household pet option. People who want to be close to animals but cannot keep pets were the project's initial focus.
+Pet-ownership constraints inspired the project, but they do not prove demand for a virtual companion. Plush toys, game characters, video, social contact, and 2D digital companions may already be enough. Research should first establish what people actually use and what, if anything, remains missing.
 
-Connection with a character, however, does not necessarily come from wanting a pet. Some people may find emotional comfort in game characters, plush toys, or fictional creatures. Others may simply want “another presence” around them while keeping their own activities and rhythm. These are directions for research; the creator's own emotional response cannot establish user demand.
+## 2. Priority audience and candidate segments
 
-## 2. Retain the age framing and add behavioral and psychological segments
+Early feedback should focus on adults aged 18–35 who spend time alone several times a week, can describe an emotional connection with a character or object, prefer low-disruption companionship, and are open to XR. These criteria define an exploratory sample; they are not evidence that the need exists. Participants do not need to like Baobao in advance, and loneliness should not be used as a recruitment label.
 
-Gen Z and younger users remain the current demographic framing. Three early hypothesis segments are added for future recruitment and comparison. They are not validated target markets and may overlap.
+| Candidate segment | Difference to explore |
+|---|---|
+| A — Pet-constrained | What kind of connection is wanted, and which practical constraints prevent pet ownership? |
+| B — Character-attached | Does attachment come from appearance, story, familiarity, or interaction, and does spatial presentation add anything? |
+| C — Ambient-companionship seeking | In which situations is another presence welcome, and how much interaction or attention is acceptable? |
 
-| Candidate segment | Possible needs or circumstances | What user research needs to establish |
-|---|---|---|
-| A — Pet-constrained | Likes animals or wants a pet, but faces rental, travel, financial, family, time, or housing constraints. | Whether the person wants care, physical contact, interaction, or companionship, and which of those needs a virtual companion could address. |
-| B — Character-attached | Readily forms emotional connections with game characters, mascots, animated characters, plush toys, or fictional creatures, without necessarily wanting a real pet. | Whether connection comes from appearance, personality, story, familiarity, or interaction, and whether spatial presentation adds value. |
-| C — Ambient-companionship seeking | Wants another presence in their surroundings, such as at home, without continuous conversation, interruptions, demands to reply, care responsibilities, or social pressure. | In which real situations this preference occurs, whether existing alternatives are sufficient, and whether quiet presence adds value. |
+The segments may overlap. The Browser stage records these differences without attempting to select a winning segment or generalize to all younger users.
 
-Research should begin with recent experiences, lifestyle, and existing alternatives before showing the concept. Record age, device habits, segment membership, and reasons for rejection separately to examine whether demand differences are better explained by age or companionship preferences. There is no evidence yet that identifies the most promising segment; see U5 in 05.
+## 3. Need exploration during the Browser stage
 
-## 3. Existing alternatives and the opportunity to explore
+Before showing Baobao, ask about a recent specific situation: what the person was doing, what kind of company they wanted, what they used instead, and what worked or did not. After the experience, ask whether Baobao would fit that situation and what a no-care relationship adds or takes away.
 
-2D virtual pets reduce the practical requirements of keeping a real animal. If a product still requires feeding, check-ins, or state maintenance, it may introduce care obligations. Complex features and cumbersome interactions may also increase the effort of using it.
+I will build the Browser Demo independently and invite participants when practical. Need interviews and behavior feedback should be recorded separately; behavior that is easy to understand does not prove an unmet need. If no interviews are possible, the need remains unvalidated without blocking prototype work. Repeated absence of a concrete context or unmet need should trigger a review of the audience and value thesis rather than further investment based only on character appeal. See [07 — Browser Demo Validation Goal](./07_Browser_Demo_Validation_Goal.md).
 
-Game characters and plush toys may also carry emotional connections. Research should establish how users currently find companionship, relaxation, or emotional comfort. The project needs to compare alternatives people actually use, rather than infer demand for a virtual companion solely from an inability to keep pets.
+## 4. Conditions for exploration
 
-2D characters appear within a screen, which limits how they express shared spatial position, bodily scale, and the relationship established by reaching toward them. A medium's limitations are not necessarily a user pain point, however, and 2D experiences may already provide sufficient companionship. Scout therefore explores two separate questions: whether co-presence without care obligations has value, and whether spatial presentation adds enough value to warrant adoption.
-
-## 4. Why explore this now?
-
-The spatial concept originated in my personal experience with Apple Vision Pro: virtual content appeared in the real environment, and gaze, hand movements, and visual feedback gave me a sensation close to “touch.” This made a spatial companion with position, scale, and bodily responses a direction worth discussing. It is not a general user finding or physical haptic feedback.
-
-Apple Vision Pro is not the target product platform. The project targets Goertek's own VR platform; the device, operating system, engine, SDK, input permissions, and operating context remain unconfirmed and need to be reviewed in the target conditions.
-
-## 5. Why are we positioned to explore it?
-
-Goertek's XR devices, technical sharing, and specialists offer potential points of contact. This remains a personal design exploration without a commitment of device access or engineering support. The concept video and browser behavior reference will help turn an abstract request into specific interaction and capability questions. Support still requires an actual decision.
-
-Building on these user hypotheses and exploration conditions, [02_Product Thesis and Validation Framework](./02_Product_Thesis_and_Validation_Framework.md) defines the candidate relationship and how it should be assessed.
+The spatial concept began with personal Apple Vision Pro observations. The intended direction is Goertek's VR hardware, whose device, operating mode, and available capabilities remain unknown. I will complete the Browser Demo independently and seek device access and external support only after it is mature enough to communicate the idea. Personal experience and potential organizational access are context, not user-value evidence.

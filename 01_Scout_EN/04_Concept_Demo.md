@@ -1,14 +1,10 @@
 # Exploration 04 — Concept Demo
 
-An approximately 20-second concept video is available to express the intended experience of one encounter. The browser prototype is not yet complete; together, the two will form **Vision + Logic** communication materials.
+[Open the approximately 20-second concept video](../demo.mp4). It communicates the atmosphere, spatial intent, and imagined flow of one encounter. It does not demonstrate implemented capabilities or research results.
 
-[Open the concept demo](../demo.mp4)
+| Material | Purpose |
+|---|---|
+| Concept video — available | Helps people understand the intended experience. |
+| Browser Demo — planned | Shows the behavior logic and allows someone to interact, interpret the response, and leave. |
 
-## 1. What each material answers
-
-| Material | Question | What it communicates | Evidence boundary |
-|---|---|---|---|
-| Concept Video — available | What should the eventual experience feel like? | Vision, atmosphere, spatial intent, emotional direction, and intended interaction flow. | Audiovisual presentation cannot establish actual spatial, contact, companionship, or technical effects. |
-| Browser Prototype — planned | How is Baobao intended to operate? | Behavioral logic, states, feedback timing, causality, and input/output structure. | It can examine behavioral understanding with proxy inputs, but cannot replace on-device evidence. |
-
-For engineering discussions, first use the video to establish the experience, then the prototype to explain states, inputs, and feedback, and finally list required capabilities and the questions for the next validation round.
+For technical discussions, the video can introduce the intended experience before the prototype explains the logic. When collecting behavior feedback, show the video only after the Browser session so it does not teach the expected interpretation. See [07 — Browser Demo Validation Goal](./07_Browser_Demo_Validation_Goal.md).

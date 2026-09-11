@@ -1,39 +1,38 @@
-# Scout — Autonomous Spatial Companion | Exploration Overview
+# Baobao — An Autonomous Spatial Companion
 
-**Baobao has a life of his own. Sometimes, that life intersects with yours.** Scout explores whether an autonomous spatial companion can create meaningful companionship through quiet co-presence, mutual recognition, and lightweight interaction without care obligations.
+> Baobao explores whether quiet co-presence, mutual awareness, and lightweight interaction can create meaningful companionship without care obligations.
 
-**Current status:** Problem exploration (TRL 1–2), with concept materials available. The current direction is a browser interaction logic prototype; implementation and user testing have not yet been completed.
+**Current status:** early problem exploration (TRL 1–2). Product documents, character references, and a concept video exist. The Browser Demo has not yet been built or tested.
 
-## 1. Who might need this, and what are we exploring?
+## 1. Audience and product direction
 
-The project starts from constraints on pet ownership and extends to the possibility of connecting with animals or characters and experiencing companionship without pressure. Gen Z and younger users remain the demographic framing, with three candidate segments: pet-constrained, character-attached, and ambient-companionship seeking. They may overlap; demand strength, specific contexts, and which segment holds the most potential remain unvalidated. See [01_Problem Statement](./01_Problem_Statement.md).
+The project began with barriers to pet ownership and now considers a broader need for low-pressure connection with an animal or character. It focuses on younger adults and three overlapping candidate segments: people constrained from owning pets, people who form emotional bonds with characters, and people who value ambient companionship. The strength of the need and the most relevant contexts remain unvalidated. See [01 — Problem Statement](./01_Problem_Statement.md).
 
-Baobao is a brave harp seal pup who can take care of himself. He and the user have their own lives and occasionally meet. Autonomous activity and natural responses are candidate mechanisms. Low disruption, no feeding upkeep, no check-ins, no punishment, and no care debt are design constraints. See [02_Product Thesis and Validation Framework](./02_Product_Thesis_and_Validation_Framework.md).
+Baobao is a brave, independent harp seal pup. He and the user have separate lives and occasionally meet. Autonomous activity and natural responses are candidate mechanisms. Low disruption, no feeding upkeep, no check-ins, no punishment, and no care debt are design constraints. See [02 — Product Thesis and Validation Framework](./02_Product_Thesis_and_Validation_Framework.md).
 
-## 2. Existing work and its purpose
+## 2. Existing materials
 
-| Material or activity | Status | Purpose and boundary |
+| Material | Status | Purpose |
 |---|---|---|
-| Product documents and character references | Available | Describe the candidate solution; they are not evidence of its effects. |
-| Approximately 20-second concept video | Available | Express the vision, atmosphere, spatial intent, and intended interaction flow. |
-| Browser prototype and user testing | Planned | Explain states, timing, causality, and inputs/outputs, and examine behavioral understanding and initial perceived autonomy. |
-| Target-platform review and on-device prototype | Not completed | Device capabilities, permissions, operating mode, and spatial effects remain unknown. |
+| Product documents and character references | Available | Define the current concept and production direction. |
+| Approximately 20-second concept video | Available | Communicates atmosphere, spatial intent, and an imagined encounter. |
+| Browser Demo and user feedback | Not started | Will make states, timing, causality, and inputs visible and testable. |
+| Target-platform review and on-device prototype | Not started | Requires a mature Browser Demo, device access, and external support. |
 
-The existing video and planned browser prototype will form **Vision + Logic** materials for engineering discussions. See [04_Concept Demo](./04_Concept_Demo.md). The spatial concept originated in personal observations using Apple Vision Pro, while the target product platform is Goertek's own VR platform. The former cannot establish the latter's capabilities, and the project has no commitment of device access or engineering support.
+The concept video and Browser Demo will form a **Vision + Logic** package for later technical discussions. The spatial idea grew from personal Apple Vision Pro experience, while the intended direction is Goertek's VR hardware. One cannot establish the capabilities of the other, and there is no current commitment of device or engineering support.
 
-## 3. Now, next, and longer-term scope
+## 3. Current and later scope
 
-| Direction | Main task |
+| Horizon | Focus |
 |---|---|
-| NOW — Browser | Examine behavioral causality, states and timing, natural endings, and initial perceived autonomy; specify inputs/outputs and support a device-resource request. |
-| NEXT — First XR round | Review the platform; prioritize spatial presence, stable scale, and position, then examine real inputs and subjective contact separately. |
-| LATER — Companionship and adoption | Study passive co-presence, low disruption, relationship continuity, voluntary return, and actual device choices in separate rounds. |
-| FUTURE — Baobao World | Explore “Baobao's world ↔ Baobao visits ↔ the user's digital world”; do not implement a full world or cross-app runtime now. |
+| NOW — Browser | Build and refine the interaction logic independently; self-test behavior, timing, endings, and recovery; collect feedback when possible. |
+| NEXT — On-device | Use the mature Demo to seek support, review the platform, and test stable scale, position, approach, and spatial presence. |
+| LATER — Relationship and adoption | Study passive co-presence, low disruption, repeated encounters, voluntary return, and actual device choices in separate rounds. |
+| FUTURE — Baobao's world | Explore movement between Baobao's world and the user's digital world; a full world and cross-app runtime are outside the current scope. |
 
-Each round focuses on one major risk. A stated direction does not mean the work is complete or approved. Metrics and evidence boundaries are defined in [05_Assumption Map](./05_Assumption_Map.md).
+## 4. What the Browser stage should produce
 
-## 4. What should this round establish?
-
-Determine whether Baobao's behavior is understandable, coherent, and initially autonomous enough to justify testing spatial presence on a real device, while producing a concrete reference for engineering discussions. This round does not need to prove long-term companionship, purchase or sustained-use intent, or superiority over all 2D alternatives.
-
-Complete the browser scope, test plan, and resourcing arrangements first, then make resource decisions based on the results. A device request should explain what this round taught us and which remaining core questions require real hardware; risk reduction cannot be claimed in advance. See [06_Next-Phase Decisions](./06_Next_Phase_Decisions.md) for entry and completion criteria, and [07_Browser Demo Validation Goal](./07_Browser_Demo_Validation_Goal.md) for execution details.
+1. A clear set of user questions, candidate audiences, and unvalidated product assumptions.
+2. A repeatable Browser Demo whose states, inputs, exits, and failure recovery have been self-tested.
+3. Behavior-understanding, perceived-autonomy, and need-related feedback when participants are available; otherwise those questions remain explicitly unvalidated.
+4. A concise package containing the Demo, behavior notes, known issues, and minimum device requirements for seeking on-device support.

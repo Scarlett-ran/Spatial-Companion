@@ -1,73 +1,77 @@
 # Exploration 07 — Browser Demo Validation Goal
 
-Browser work is the current direction, formally defined as an **Interaction Logic Prototype / Baobao Behaviour & Interaction Reference**. It has not yet been built or tested. This document defines the planned work; scope, sample, and thresholds need to be set before starting.
+This is the execution draft for Browser v0.1, an interaction-logic prototype and behavior reference. See [03 — Interaction Experience Specification](./03_Interaction_Experience_Specification.md) for behavior, [05 — Assumption Map](./05_Assumption_Map.md) for evidence, and [06 — Next-Phase Decisions](./06_Next_Phase_Decisions.md) for stage transitions.
 
-## 1. Two purposes, one main research question
+## 1. Build scope
 
-The research purpose is to examine whether users understand why Baobao behaves as he does, and whether inputs, state transitions, and endings are coherent. The core question is “How do you understand what just happened?” A companionship score is not the primary passing criterion. Initial perceived autonomy and attention burden support diagnosis; concept interest and companionship feedback provide directional signals only.
+Use a single-scene, 2D character experience in a desktop browser. Build a small animation set from the existing character reference; do not require a real-time 3D model or spatial navigation. Before implementation, check for usable transparent character art and rest, observe, turn, sniff, and exit transitions. The concept video is not assumed to provide production-ready interactive assets. If assets are missing, account for that work and first test one input-to-motion sample.
 
-The engineering purpose is to translate experience intent into concrete behavior, input, and output requirements: how Scout would use a capability if the real device provides it, and which conditions still need review. Browser and the existing concept video form Vision + Logic: the video expresses the intended feeling, while the prototype explains the intended operation. See [04_Concept Demo](./04_Concept_Demo.md) for responsibilities.
-
-## 2. Minimum experience and interaction causality
-
-Use [03_Interaction Experience Specification](./03_Interaction_Experience_Specification.md) as the behavioral basis. Include at least resting and one non-sleeping autonomous activity, plus interaction, unnoticed-user, and no-interaction branches. Baobao is already active when the user enters and resumes his own activity afterward. Completing a fixed contact sequence is not necessary for a valid experience.
-
-| Proxy for user intent | Candidate behavior | Main check |
-|---|---|---|
-| Look: hover or focus | Briefly notice when conditions are met, or continue the current activity. | Can users understand a response or lack of one without interpreting the system as random or broken? |
-| Approach: simulated movement closer | Respond subtly while maintaining a natural distance. | Is the timing relationship between approach and response legible? |
-| Reach: simulated reach or contact | Sniff, accept contact, or approach slightly after an explicit invitation. | Are approach, contact, and response clearly distinguished? A click must not be treated as an actual hand capability. |
-| Disengage: withdraw the proxy input | End after a brief response and return to independent activity. | Does the ending feel natural, or does the user think something else is required? |
-| No invitation | Continue autonomous activity without constantly facing the user or soliciting a response. | Does the character have his own rhythm, and does non-interaction create attention pressure? |
-
-Select the specific proxies in the Demo Scope. A few controls can represent hover, pointer interaction, and simulated distance, without full navigation or a complex life system. Multiple characters, multiple contact regions, an item system, complex conversation, AI personality, cross-app implementation, and long-term growth are outside this round. Product principles and scope categories are defined in 02.
-
-## 3. From browser proxies to device requirements
-
-The following mappings need engineering confirmation. They are neither established target-device capabilities nor a commitment to obtain all six at once.
-
-| Browser simulation | Desired device capability | Interaction it supports | Questions or alternatives to check |
-|---|---|---|---|
-| Cursor hover / focus | Gaze or another available attention input | Notice user attention and decide whether to respond. | Gaze access and data granularity; head direction, system focus, or explicit confirmation must be labeled as proxies. |
-| Cursor / simulated movement | Relative head or body approach information | Respond subtly as the user moves closer. | Tracked objects, reference coordinates, and distance precision; head pose does not establish full-body tracking. |
-| Mouse press / pointer interaction | Detection of hand approach, reaching, or contact | Sniff, accept touch, and stop responding after withdrawal. | Hand data, precision, occlusion, and permissions; controllers are a possible alternative, with experience evidence interpreted separately. |
-| Simulated depth | Spatial distance, environment understanding, and stable positioning | Maintain scale, distance, and spatial relationships. | Coordinates, planes, anchors, relocalization, and occlusion; simulated depth does not establish real depth perception. |
-| Animation feedback | Real-time visual and behavioral feedback | Align bodily responses with input. | Animation system, performance, and end-to-end latency; physical haptics are not assumed. |
-| Browser state machine | Behavior logic on the target runtime | Autonomous activity, response, disengagement, pausing, and recovery. | Lifecycle, interruptions, operating modes, and performance; saved state does not establish cross-app coexistence. |
-
-Structure the engineering handoff as “capability X → interaction Y → validation question Z,” distinguishing essential capabilities for the first presence experiment from optional extensions for later contact experiments. The device model, engine, SDK, permissions, deployment conditions, and engineering support all need actual confirmation.
-
-## 4. What this round can and cannot validate
-
-| Evidence the browser can provide | Questions requiring the corresponding real conditions |
+| Item | Browser v0.1 choice |
 |---|---|
-| Simulated state logic, behavioral causality, and basic comprehension | Real spatial presence, bodily scale, depth perception, and spatial approachability |
-| Timing, state transitions, and natural endings under proxy input | Actual gaze behavior, real hand tracking, and end-to-end response timing |
-| Initial understanding of a few autonomous activities | Credible subjective contact without physical haptics, sustained autonomy, and relationship continuity |
-| Directional feedback on the character concept, low disruption, and co-presence | Real spatial coexistence, cross-app feasibility, target-device runtime stability, and actual adoption |
+| Activity and feedback | Two starting activities—resting and observing—plus a brief notice, one sniff response, and a natural exit. |
+| Look | Toggle simulated attention. The control names the user's action without revealing an internal state or expected outcome. |
+| Approach | Toggle far/near to simulate relative distance; Baobao does not move. |
+| Reach | A single click sends one invitation without requiring a hold; it may trigger directly from autonomous activity. |
+| Disengage | Explicitly withdraw the invitation and clear attention; remaining near does not automatically retrigger. |
+| Session controls | Hide/Show, Close/Restart; page reload starts a new session. |
+| Research controls | Configure the starting activity, reset the scene, simulate input failure/recovery, and export an event log; keep these controls out of the participant view. |
 
-Smooth browser operation demonstrates only that the current simulation runs. Finding the character cute or wanting another click does not establish spatial, companionship, or adoption outcomes. Real-device access is necessary to obtain the remaining spatial evidence, but appropriate prototypes, tasks, and tests are still required within the target capabilities.
+Do not implement real hand or gaze tracking, spatial approach by the character, multiple contact zones, sound, a world or object system, complex AI, growth, or cross-app behavior. Record the browser, window size, and input device; the first version supports mouse input only.
 
-## 5. Test observations
+## 2. Build and self-test
 
-Metric definitions are maintained in [05_Assumption Map](./05_Assumption_Map.md). Start with free observation and neutral follow-up questions before asking about specific feelings. To examine unprompted behavioral understanding, let participants try the browser before watching the concept video, or record viewing order separately, so the video does not supply the answers in advance.
+| Required branch | Check |
+|---|---|
+| No interaction / no notice | Starting the session does not interrupt the activity. Look alone does not interrupt rest; sustained Look may trigger during observation. Doing nothing remains a complete path. |
+| Uninvited notice | Approach or eligible Look triggers at most once. Repeated distance changes, Hide/Show, and pause/recovery do not reset the count. |
+| Invitation, disengage, and reinvitation | Reach can trigger directly. Repeated clicks do not extend or queue a response. Disengage stops it; a new Reach may smoothly interrupt Exit. |
+| Hide, close, and restart | Recovery never reveals a user-hidden character. Close requires Restart. A new session resets input and counts. |
+| Interruption and recovery | Page blur, backgrounding, or simulated failure enters Safe Pause. Repeated failure does not replay old input; ongoing failure remains paused; recovery waits for new input. |
+| No input versus failure | No user input continues autonomous activity. Only confirmed input failure enters Safe Pause. |
+| Session and count | Initial load, reload, or Restart creates a new session and resets Notice. Hide/Show, page switching, and pause/recovery do not. |
 
-| Observation | Recording method | Role in the decision |
+When inputs arrive together, process them in this order: Close/Hide, Safe Pause, Disengage, Reach, Approach, then Look. Turning Look off does not cancel an active Reach; Disengage clears Look and the current invitation. If the user disengages while still near, they must move far and approach again before Notice can retrigger, and the once-per-session limit still applies.
+
+Normal input is ignored while hidden, closed, or safely paused. Show returns Baobao to autonomous activity unless the system is still unreliable. Recovery clears simulated attention and proximity, so recovery itself is never treated as a new approach.
+
+## 3. Feedback when participants are available
+
+First complete a stable version, then collect feedback from people I can reasonably reach. No fixed sample is required. Invite people matching the audience in 01 when possible and record overlapping segments and device familiarity. Participation does not imply engineering or organizational support. If nobody is available, continue self-testing and leave user understanding and need assumptions unvalidated.
+
+A roughly 25-minute session can be used to find concrete problems; it does not estimate population-level rates.
+
+| Part | Suggested time | Task and record |
 |---|---|---|
-| Behavior and causality understanding (M1) | Ask “What just happened, and why do you think it happened?” Record whether the explanation matches the actual state, prompts needed, and misunderstood branches. | The primary research evidence for this round. |
-| State transitions and timing (M1/T3) | Record triggers, feedback, withdrawal, interruptions, and recovery, including when users perceive responses as early, late, or incoherent. | Distinguish implementation failures from comprehension problems; do not extrapolate to device latency. |
-| Initial perceived autonomy (M2) | Observe spontaneous descriptions without input and ask “What is he doing, and how can you tell?” Distinguish independent activity, waiting, randomness, and non-response. | Supports changes to behavioral expression; does not establish sustained companionship. |
-| Natural endings and attention pressure (M1/M7) | After an invitation ends, observe continued demands for input, repeated attention, closing, or a perceived obligation to continue. | Check that a few behaviors do not introduce extra demands. |
-| Concept and co-presence feedback (U1/U2a, directional M5) | Record voluntary repetition, keeping/closing, and specific reasons; separate attitudes from actions. | Exploratory signals, not replacements for the main metrics or an independent gate into device work. |
+| Context interview | 5 min | Before showing Baobao, ask about a recent time alone, what the person used, and what worked or was missing. “No need” is a valid response. |
+| Free exploration | 3 min | Do not show the video or explain behavior rules. Allow no interaction; record control discovery and spontaneous interpretation. |
+| Branch tasks | 10 min | Explain only what each control simulates. In both activities, observe for about 45 seconds before trying Look, Approach, Reach, Disengage, and reinvitation. |
+| Neutral review | 5 min | Ask what happened, why, what another action would do, when they wanted to stop, and whether they felt pressure; relate it back to the earlier context. |
+| Video and concept feedback | 2 min | Show the video last. Record interest and expectations separately from prior behavior understanding. |
 
-Choosing not to interact is not an interaction failure. Forgetting to close the character is not an active choice to keep him nearby. “Am I disturbing him?” may signal burden. There is no need to lead users into saying he “has a life of his own” to establish autonomy.
+With multiple participants, alternate the order of resting and observing; use a new session for each activity. I will create opportunities to experience the key branches without explaining the expected response. Record free exploration, understanding after standard control instructions, and performance after extra prompting separately.
 
-## 6. Execution and deliverables
+Choosing not to interact is valid. A branch left incomplete after the participant declines remains missing rather than being forced. Hide and recovery are primarily self-tested. Mark feedback affected by a real fault and repeat only when useful.
 
-1. **Confirm scope and investment:** Select activities, branches, proxies, an owner, and an effort cap. Do not add features because of the long-term vision.
-2. **Complete the test plan:** Specify the sample and recruitment criteria, tasks, duration, observation method, viewing order, and preset pass/revise/stop criteria.
-3. **Build and verify:** Make input, feedback, endings, re-entry, and simulated exceptions repeatable.
-4. **Test and attribute:** Collect unprompted explanations, actions, participant quotes, and contradictory feedback; separate implementation failures, behavioral misunderstandings, and experience judgments.
-5. **Deliver evidence and engineering references:** Submit the video and prototype, state and branch tables, input/output mappings, timing and recovery notes, observations, capabilities needing confirmation, and a minimal device-resource request.
+## 4. Solo work plan and outputs
 
-Sample size, numerical thresholds, precise feedback durations, and specific device permissions have not been determined. This document must not be treated as an executed Test Plan. See [06_Next-Phase Decisions](./06_Next_Phase_Decisions.md) for completion criteria and the rationale for device access.
+I am responsible for design, asset preparation, implementation, self-testing, feedback notes, and iteration during the Browser stage. Work proceeds as time allows. Each pass addresses a defined problem; once the maturity criteria in 06 are met, package the result instead of expanding the scope while waiting for external support.
+
+| Sequence | Work | Checkpoint |
+|---|---|---|
+| Prepare and sample | Review assets and implement one input-to-motion sequence. | Confirm the approach is feasible for a solo build and record any necessary simplification. |
+| Complete Demo | Connect both activities, interaction, exit, and session controls. | The core encounter can be demonstrated end to end. |
+| Self-test and refine | Run the checks above and refine timing and transitions; collect feedback when practical. | Core faults are resolved and known limitations are clear. |
+| Package | Save a working version, record the Demo, and organize behavior notes, self-tests, and available feedback. | Use 06 to decide whether to seek on-device support. |
+
+After each work session, note the current version, completed items, main issue, and next action. Keep participant feedback separate from self-testing. Retest affected branches after changing a core input or behavior. The first-version schedule and iteration pace depend on my actual availability.
+
+## 5. Reference for later on-device discussions
+
+| Capability | Use and question | Priority |
+|---|---|---|
+| Spatial placement, scale, and rendering | Placement, viewing from different angles, approach, relocalization, and stability under the actual operating mode. | Required for the first RQ2 round. |
+| Attention and relative approach input | Support Look/Approach; determine whether gaze is exposed and whether head pose or system focus can serve as a proxy. | Review as needed, not a requirement for every part of the first round. |
+| Hand/controller input and feedback | Support Reach, contact, and withdrawal; assess precision, occlusion, false triggers, and latency. | Extension for the RQ3 contact round. |
+| Lifecycle, coexistence, and persistence | Distinguish interruption recovery, cross-app visibility, and state continuity. | Review interruption first; defer cross-app and persistence. |
+
+Device, engine, permissions, and deployment must be confirmed on the actual platform. Browser evidence applies only to the simulated input; if on-device input changes the causal structure, behavior understanding must be revisited.
