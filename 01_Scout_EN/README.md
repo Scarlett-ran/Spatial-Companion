@@ -1,19 +1,20 @@
-# Baobao — Scout Documentation
+# Baobao — Scout Reading Guide
 
-This folder covers Baobao's creative origin, product thesis, current materials, assumptions, and next steps.
+[中文](../01_Scout_CN/README.md) · [Project index](../README.md)
 
-## Reading order
+These are the current English Scout documents, synchronized with the Chinese source. Baobao is a non-speaking virtual animal companion with a daily rhythm of its own. The intended product is for lightweight MR glasses, exploring a shared life in the user's real space and an emotional bond that may develop over time.
 
-The suggested path is: **overview → user problem → product thesis → behavior rules → concept materials → assumptions → stage decision → Browser Demo plan.** File numbers indicate reading order, not research maturity.
+## Current status and reading order
 
-| File | Main question |
-|---|---|
-| [Before We Begin](./00_Before_We_Begin.md) | Where did the idea and relationship model come from? |
-| [Exploration Overview](./00_Exploration_Overview.md) | What is the project, and where does it stand? |
-| [01 — Problem Statement](./01_Problem_Statement.md) | Who might need this, in what situations, and what alternatives already exist? |
-| [02 — Product Thesis and Validation Framework](./02_Product_Thesis_and_Validation_Framework.md) | What relationship is being explored, and how will value be assessed? |
-| [03 — Interaction Experience Specification](./03_Interaction_Experience_Specification.md) | How should the Browser Demo behave? |
-| [04 — Concept Demo](./04_Concept_Demo.md) | What does the existing video communicate? |
-| [05 — Assumption Map](./05_Assumption_Map.md) | What remains unproven, and what evidence would address it? |
-| [06 — Next-Phase Decisions](./06_Next_Phase_Decisions.md) | When is the Browser Demo mature enough to seek on-device support? |
-| [07 — Browser Demo Validation Goal](./07_Browser_Demo_Validation_Goal.md) | What will I build, test, and package in the current stage? |
+I have used Codex to build the Functional Web Prototype (FWP). Version 0.1.0 is available as a locally runnable build and a static deployment package; public deployment and user trials have not yet been completed. Existing materials include character reference images, keyframes, a concept video, and five concept interview records. Those materials are not 3D models, rigs, runtime animations, or evidence of actual use. No device has been selected.
+
+| Order | Document | Question it answers |
+|---|---|---|
+| 1 | [Product Definition](01-product-definition.md) | What is Baobao, who is it for, and what experience does it offer in which situations? |
+| 2 | [Evidence and Decisions](02-evidence-and-decisions.md) | What clues and counterexamples does the research provide, why were these choices made, and what remains unknown? |
+| 3 | [Experience and Prototype](03-experience-and-prototype.md) | What are the boundaries for everyday life, interaction, time, and space, and how do the FWP and prototype on glasses differ? |
+| 4 | [Validation and Next Steps](04-validation-and-next-steps.md) | What has been delivered, what remains to be done, what do we want to learn, and how will feedback change decisions? |
+
+The work sequence is **build the FWP → user trials and refinement → build a prototype on glasses → spatial experience trials**.
+
+For this documentation, Scout means making the direction, evidence and unknowns, minimum experience, and next decision clear enough to continue exploring. It does not require proving a lasting relationship first or reinstating the old roadmap's stage gates. Once the FWP's core experience works, users have tried it, and major points of confusion have been addressed, the work can move to a prototype on glasses.
